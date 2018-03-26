@@ -96,8 +96,6 @@ class MainActivity : AppCompatActivity(), ItemClick, MainView {
 
     private var lastAfter = ""
 
-    override fun getCategory() = ""
-
     override fun getAfter() = lastAfter
 
     override var loadingEnabled = false

@@ -1,5 +1,6 @@
 package br.com.ladoleste.simpleredditclient.repository
 
+import br.com.ladoleste.simpleredditclient.common.Category
 import br.com.ladoleste.simpleredditclient.common.CustomApplication
 import br.com.ladoleste.simpleredditclient.model.Api
 import javax.inject.Inject
@@ -17,7 +18,7 @@ class NetworkRedditRepositoryImpl : RedditRepository {
     }
 
     override
-    fun getNews(category: String, after: String, limit: Int) = api.getNews(category, after, limit)
+    fun getNews(category: Category, after: String, limit: Int) = api.getNews(category.name.toLowerCase(), after, limit)
 
     override
     fun getComments(id: String) = api.getComments(id)

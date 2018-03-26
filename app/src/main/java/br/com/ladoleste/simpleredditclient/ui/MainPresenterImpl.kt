@@ -39,7 +39,7 @@ class MainPresenterImpl(private val repository: RedditRepository) : MainPresente
             lastAfter = ""
         }
 
-        cDispose.add(repository.getNews(view.category.name.toLowerCase(), lastAfter)
+        val disposable = repository.getNews(view.category, lastAfter)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     lastAfter = it.dataHolderList.after ?: ""
@@ -65,6 +65,8 @@ class MainPresenterImpl(private val repository: RedditRepository) : MainPresente
                     view.showList(currentItems)
                 }, {
                     view.showError(it)
-                }))
+                })
+
+        cDispose.add(disposable)
     }
 }

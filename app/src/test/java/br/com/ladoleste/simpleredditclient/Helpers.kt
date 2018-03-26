@@ -7,12 +7,12 @@ import java.io.*
  */
 object Helpers {
 
-    fun readFile(fileName: String = "response.json"): String {
+    fun readFile(fileName: String = "response"): String {
         val datax = StringBuffer("")
         try {
 
             val classLoader = Helpers::class.java.classLoader
-            val resource = classLoader.getResource(fileName)
+            val resource = classLoader.getResource("$fileName.json")
             val file = File(resource!!.path)
 
             val fIn = FileInputStream(file)
