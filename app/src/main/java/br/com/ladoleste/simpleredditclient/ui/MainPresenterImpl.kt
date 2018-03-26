@@ -39,7 +39,7 @@ class MainPresenterImpl(private val repository: RedditRepository) : MainPresente
             lastAfter = ""
         }
 
-        cDispose.add(repository.getNews(view.category.toString().toLowerCase(), lastAfter)
+        cDispose.add(repository.getNews(view.category.name.toLowerCase(), lastAfter)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     lastAfter = it.dataHolderList.after ?: ""

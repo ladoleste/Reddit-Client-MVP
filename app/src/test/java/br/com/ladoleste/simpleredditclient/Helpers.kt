@@ -5,33 +5,31 @@ import java.io.*
 /**
  *Created by Anderson on 15/02/2018.
  */
-class Helpers {
-    companion object {
+object Helpers {
 
-        fun readFile(fileName: String = "response.json"): String {
-            val datax = StringBuffer("")
-            try {
+    fun readFile(fileName: String = "response.json"): String {
+        val datax = StringBuffer("")
+        try {
 
-                val classLoader = Helpers::class.java.classLoader
-                val resource = classLoader.getResource(fileName)
-                val file = File(resource!!.path)
+            val classLoader = Helpers::class.java.classLoader
+            val resource = classLoader.getResource(fileName)
+            val file = File(resource!!.path)
 
-                val fIn = FileInputStream(file)
-                val isr = InputStreamReader(fIn)
-                val buffreader = BufferedReader(isr)
+            val fIn = FileInputStream(file)
+            val isr = InputStreamReader(fIn)
+            val buffreader = BufferedReader(isr)
 
-                var readString = buffreader.readLine()
-                while (readString != null) {
-                    datax.append(readString)
-                    readString = buffreader.readLine()
-                }
-
-                isr.close()
-            } catch (ioe: IOException) {
-                ioe.printStackTrace()
+            var readString = buffreader.readLine()
+            while (readString != null) {
+                datax.append(readString)
+                readString = buffreader.readLine()
             }
 
-            return datax.toString()
+            isr.close()
+        } catch (ioe: IOException) {
+            ioe.printStackTrace()
         }
+
+        return datax.toString()
     }
 }
