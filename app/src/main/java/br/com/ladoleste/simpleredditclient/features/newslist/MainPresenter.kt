@@ -1,4 +1,6 @@
-package br.com.ladoleste.simpleredditclient.ui.contracts
+package br.com.ladoleste.simpleredditclient.features.newslist
+
+import br.com.ladoleste.simpleredditclient.features.common.LifecyclePresenter
 
 /**
  * Created by Anderson on 23/03/2018

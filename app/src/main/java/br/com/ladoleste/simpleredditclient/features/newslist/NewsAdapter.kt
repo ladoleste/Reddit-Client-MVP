@@ -1,4 +1,4 @@
-package br.com.ladoleste.simpleredditclient.ui.adapter
+package br.com.ladoleste.simpleredditclient.features.newslist
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
@@ -7,12 +7,10 @@ import br.com.ladoleste.simpleredditclient.R
 import br.com.ladoleste.simpleredditclient.common.NewsItem
 import br.com.ladoleste.simpleredditclient.common.inflate
 import br.com.ladoleste.simpleredditclient.dto.News
-import br.com.ladoleste.simpleredditclient.ui.ItemClick
-import br.com.ladoleste.simpleredditclient.ui.adapter.AdapterConstants.LOADING_ITEM
-import br.com.ladoleste.simpleredditclient.ui.adapter.AdapterConstants.NEWS_ITEM
-import br.com.ladoleste.simpleredditclient.ui.adapter.AdapterConstants.NEWS_ITEM_SELF
-import br.com.ladoleste.simpleredditclient.ui.adapter.binders.BinderAdapterNews
-import br.com.ladoleste.simpleredditclient.ui.adapter.binders.BinderAdapterNewsSelf
+import br.com.ladoleste.simpleredditclient.features.comments.AdapterConstants.LOADING_ITEM
+import br.com.ladoleste.simpleredditclient.features.comments.AdapterConstants.NEWS_ITEM
+import br.com.ladoleste.simpleredditclient.features.comments.AdapterConstants.NEWS_ITEM_SELF
+import br.com.ladoleste.simpleredditclient.features.common.ItemClick
 import timber.log.Timber
 
 class NewsAdapter(private var items: List<NewsItem>, private val itemClick: ItemClick) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

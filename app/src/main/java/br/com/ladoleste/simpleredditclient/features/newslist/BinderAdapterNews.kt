@@ -1,4 +1,4 @@
-package br.com.ladoleste.simpleredditclient.ui.adapter.binders
+package br.com.ladoleste.simpleredditclient.features.newslist
 
 import android.annotation.SuppressLint
 import android.support.v7.widget.RecyclerView
@@ -7,8 +7,8 @@ import br.com.ladoleste.simpleredditclient.common.CustomApplication.Companion.dr
 import br.com.ladoleste.simpleredditclient.common.loadImage
 import br.com.ladoleste.simpleredditclient.common.toFriendlyTime
 import br.com.ladoleste.simpleredditclient.dto.News
-import br.com.ladoleste.simpleredditclient.ui.ItemClick
-import br.com.ladoleste.simpleredditclient.ui.adapter.getCommentsText
+import br.com.ladoleste.simpleredditclient.features.comments.getCommentsText
+import br.com.ladoleste.simpleredditclient.features.common.ItemClick
 import kotlinx.android.synthetic.main.inc_info.view.*
 import kotlinx.android.synthetic.main.item_news.view.*
 

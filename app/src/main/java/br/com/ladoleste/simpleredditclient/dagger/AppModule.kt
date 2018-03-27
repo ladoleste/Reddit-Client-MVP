@@ -1,10 +1,10 @@
 package br.com.ladoleste.simpleredditclient.dagger
 
+import br.com.ladoleste.simpleredditclient.features.comments.CommentsPresenter
+import br.com.ladoleste.simpleredditclient.features.comments.CommentsPresenterImpl
+import br.com.ladoleste.simpleredditclient.features.newslist.MainPresenter
+import br.com.ladoleste.simpleredditclient.features.newslist.MainPresenterImpl
 import br.com.ladoleste.simpleredditclient.repository.RedditRepository
-import br.com.ladoleste.simpleredditclient.ui.CommentsPresenterImpl
-import br.com.ladoleste.simpleredditclient.ui.MainPresenterImpl
-import br.com.ladoleste.simpleredditclient.ui.contracts.CommentsPresenter
-import br.com.ladoleste.simpleredditclient.ui.contracts.MainPresenter
 import dagger.Module
 import dagger.Provides
 

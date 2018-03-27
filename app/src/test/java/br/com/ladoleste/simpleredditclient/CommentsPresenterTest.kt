@@ -2,10 +2,10 @@ package br.com.ladoleste.simpleredditclient
 
 import br.com.ladoleste.simpleredditclient.common.CustomDeserializer
 import br.com.ladoleste.simpleredditclient.dto.Thing
+import br.com.ladoleste.simpleredditclient.features.comments.CommentsPresenter
+import br.com.ladoleste.simpleredditclient.features.comments.CommentsPresenterImpl
+import br.com.ladoleste.simpleredditclient.features.comments.CommentsView
 import br.com.ladoleste.simpleredditclient.repository.RedditRepository
-import br.com.ladoleste.simpleredditclient.ui.CommentsPresenterImpl
-import br.com.ladoleste.simpleredditclient.ui.contracts.CommentsPresenter
-import br.com.ladoleste.simpleredditclient.ui.contracts.CommentsView
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 import io.reactivex.Single
@@ -48,7 +48,7 @@ class CommentsPresenterTest {
     }
 
     @Test
-    fun test_that() {
+    fun testInterationsWithCommentsView() {
         presenter.loadComments()
         verify(view, times(2)).id
         verify(view, never()).showError(Throwable())

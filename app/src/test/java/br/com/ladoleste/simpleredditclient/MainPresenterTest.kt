@@ -1,10 +1,10 @@
 package br.com.ladoleste.simpleredditclient
 
 import br.com.ladoleste.simpleredditclient.dto.Thing
+import br.com.ladoleste.simpleredditclient.features.newslist.MainPresenter
+import br.com.ladoleste.simpleredditclient.features.newslist.MainPresenterImpl
+import br.com.ladoleste.simpleredditclient.features.newslist.MainView
 import br.com.ladoleste.simpleredditclient.repository.RedditRepository
-import br.com.ladoleste.simpleredditclient.ui.MainPresenterImpl
-import br.com.ladoleste.simpleredditclient.ui.contracts.MainPresenter
-import br.com.ladoleste.simpleredditclient.ui.contracts.MainView
 import com.google.gson.Gson
 import io.reactivex.Single
 import io.reactivex.android.plugins.RxAndroidPlugins
@@ -44,7 +44,7 @@ class MainPresenterTest {
     }
 
     @Test
-    fun test_this() {
+    fun testInterationsWithMainView() {
         presenter.loadNews(false)
         verify(view).showList(any())
         verify(view, never()).showError(Throwable())

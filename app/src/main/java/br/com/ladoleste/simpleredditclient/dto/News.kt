@@ -3,7 +3,8 @@ package br.com.ladoleste.simpleredditclient.dto
 import android.webkit.URLUtil
 import br.com.ladoleste.simpleredditclient.common.NewsItem
 import br.com.ladoleste.simpleredditclient.dto.linkp.Preview
-import br.com.ladoleste.simpleredditclient.ui.adapter.AdapterConstants
+import br.com.ladoleste.simpleredditclient.features.comments.AdapterConstants.NEWS_ITEM
+import br.com.ladoleste.simpleredditclient.features.comments.AdapterConstants.NEWS_ITEM_SELF
 
 data class News(
         val author: String,
@@ -22,5 +23,5 @@ data class News(
         val permalink: String
 ) : NewsItem {
     override val getType: Int
-        get() = if (isSelf || !URLUtil.isValidUrl(thumbnail)) AdapterConstants.NEWS_ITEM_SELF else AdapterConstants.NEWS_ITEM
+        get() = if (isSelf || !URLUtil.isValidUrl(thumbnail)) NEWS_ITEM_SELF else NEWS_ITEM
 }

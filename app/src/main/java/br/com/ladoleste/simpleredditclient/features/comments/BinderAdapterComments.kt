@@ -1,4 +1,4 @@
-package br.com.ladoleste.simpleredditclient.ui.adapter.binders
+package br.com.ladoleste.simpleredditclient.features.comments
 
 import android.annotation.SuppressLint
 import android.support.v7.widget.RecyclerView

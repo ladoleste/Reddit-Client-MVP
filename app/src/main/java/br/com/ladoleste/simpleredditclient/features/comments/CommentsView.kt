@@ -1,4 +1,4 @@
-package br.com.ladoleste.simpleredditclient.ui.contracts
+package br.com.ladoleste.simpleredditclient.features.comments
 
 import br.com.ladoleste.simpleredditclient.dto.Comments
 import br.com.ladoleste.simpleredditclient.dto.News

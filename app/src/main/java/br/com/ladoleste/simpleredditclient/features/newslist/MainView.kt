@@ -1,4 +1,4 @@
-package br.com.ladoleste.simpleredditclient.ui.contracts
+package br.com.ladoleste.simpleredditclient.features.newslist
 
 import br.com.ladoleste.simpleredditclient.common.Category
 import br.com.ladoleste.simpleredditclient.common.NewsItem

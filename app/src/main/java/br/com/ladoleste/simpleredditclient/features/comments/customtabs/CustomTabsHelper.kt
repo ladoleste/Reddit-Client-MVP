@@ -1,4 +1,4 @@
-package br.com.ladoleste.simpleredditclient.ui.customtabs
+package br.com.ladoleste.simpleredditclient.features.comments.customtabs
 
 import android.app.Activity
 import android.content.ComponentName

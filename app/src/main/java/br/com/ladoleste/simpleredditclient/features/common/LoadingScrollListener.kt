@@ -1,4 +1,4 @@
-package br.com.ladoleste.simpleredditclient.ui
+package br.com.ladoleste.simpleredditclient.features.common
 
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView

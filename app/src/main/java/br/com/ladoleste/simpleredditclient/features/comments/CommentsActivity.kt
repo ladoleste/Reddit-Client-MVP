@@ -1,4 +1,4 @@
-package br.com.ladoleste.simpleredditclient.ui
+package br.com.ladoleste.simpleredditclient.features.comments
 
 import android.content.Intent
 import android.net.Uri
@@ -21,11 +21,7 @@ import br.com.ladoleste.simpleredditclient.common.toFriendlyTime
 import br.com.ladoleste.simpleredditclient.common.toHtml
 import br.com.ladoleste.simpleredditclient.dto.Comments
 import br.com.ladoleste.simpleredditclient.dto.News
-import br.com.ladoleste.simpleredditclient.ui.adapter.CommentsAdapter
-import br.com.ladoleste.simpleredditclient.ui.adapter.getCommentsText
-import br.com.ladoleste.simpleredditclient.ui.contracts.CommentsPresenter
-import br.com.ladoleste.simpleredditclient.ui.contracts.CommentsView
-import br.com.ladoleste.simpleredditclient.ui.customtabs.CustomTabsHelper
+import br.com.ladoleste.simpleredditclient.features.comments.customtabs.CustomTabsHelper
 import kotlinx.android.synthetic.main.activity_comments.*
 import kotlinx.android.synthetic.main.inc_info.*
 import kotlinx.android.synthetic.main.inc_toolbar.*

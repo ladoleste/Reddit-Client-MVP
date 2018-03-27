@@ -1,4 +1,4 @@
-package br.com.ladoleste.simpleredditclient.ui.adapter
+package br.com.ladoleste.simpleredditclient.features.comments
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import br.com.ladoleste.simpleredditclient.R
 import br.com.ladoleste.simpleredditclient.common.inflate
 import br.com.ladoleste.simpleredditclient.dto.Comments
-import br.com.ladoleste.simpleredditclient.ui.adapter.binders.BinderAdapterComments
 
 class CommentsAdapter(private var items: List<Comments>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 

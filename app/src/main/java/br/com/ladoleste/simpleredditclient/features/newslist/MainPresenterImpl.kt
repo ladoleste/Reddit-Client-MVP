@@ -1,17 +1,15 @@
-package br.com.ladoleste.simpleredditclient.ui
+package br.com.ladoleste.simpleredditclient.features.newslist
 
 import br.com.ladoleste.simpleredditclient.common.NewsItem
+import br.com.ladoleste.simpleredditclient.features.comments.AdapterConstants.LOADING_ITEM
+import br.com.ladoleste.simpleredditclient.features.common.BasePresenter
 import br.com.ladoleste.simpleredditclient.repository.RedditRepository
-import br.com.ladoleste.simpleredditclient.ui.adapter.AdapterConstants
-import br.com.ladoleste.simpleredditclient.ui.contracts.MainPresenter
-import br.com.ladoleste.simpleredditclient.ui.contracts.MainView
-import br.com.ladoleste.simpleredditclient.viewmodel.BaseViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 
 /**
  * Created by Anderson on 23/03/2018
  */
-class MainPresenterImpl(private val repository: RedditRepository) : MainPresenter, BaseViewModel() {
+class MainPresenterImpl(private val repository: RedditRepository) : MainPresenter, BasePresenter() {
 
     private lateinit var view: MainView
     private var currentItems = emptyList<NewsItem>()
@@ -19,7 +17,7 @@ class MainPresenterImpl(private val repository: RedditRepository) : MainPresente
 
     private val loadingItem = object : NewsItem {
         override val getType: Int
-            get() = AdapterConstants.LOADING_ITEM
+            get() = LOADING_ITEM
     }
 
     override fun resume() {

@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".features.newslist.MainActivity"
             android:theme="@style/AppTheme.Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.CommentsActivity"
+            android:name=".features.comments.CommentsActivity"
             android:label="@string/act_comments"
             android:theme="@style/AppTheme.Detail" />
     </application>

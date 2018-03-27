@@ -1,8 +1,8 @@
 package br.com.ladoleste.simpleredditclient.dagger
 
+import br.com.ladoleste.simpleredditclient.features.comments.CommentsActivity
+import br.com.ladoleste.simpleredditclient.features.newslist.MainActivity
 import br.com.ladoleste.simpleredditclient.repository.NetworkRedditRepositoryImpl
-import br.com.ladoleste.simpleredditclient.ui.CommentsActivity
-import br.com.ladoleste.simpleredditclient.ui.MainActivity
 import dagger.Component
 import javax.inject.Singleton
 

@@ -1,15 +1,13 @@
-package br.com.ladoleste.simpleredditclient.ui
+package br.com.ladoleste.simpleredditclient.features.comments
 
+import br.com.ladoleste.simpleredditclient.features.common.BasePresenter
 import br.com.ladoleste.simpleredditclient.repository.RedditRepository
-import br.com.ladoleste.simpleredditclient.ui.contracts.CommentsPresenter
-import br.com.ladoleste.simpleredditclient.ui.contracts.CommentsView
-import br.com.ladoleste.simpleredditclient.viewmodel.BaseViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 
 /**
  *Created by Anderson on 14/02/2018.
  */
-class CommentsPresenterImpl(private val repository: RedditRepository) : CommentsPresenter, BaseViewModel() {
+class CommentsPresenterImpl(private val repository: RedditRepository) : CommentsPresenter, BasePresenter() {
 
     private lateinit var view: CommentsView
 

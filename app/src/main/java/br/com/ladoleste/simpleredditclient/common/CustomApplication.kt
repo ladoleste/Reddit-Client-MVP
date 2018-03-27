@@ -14,6 +14,9 @@ class CustomApplication : Application() {
 
     companion object {
 
+        lateinit var appContext: CustomApplication
+            private set
+
         lateinit var component: AppComponent
             private set
 
@@ -27,6 +30,7 @@ class CustomApplication : Application() {
         super.onCreate()
         Stetho.initializeWithDefaults(this)
         Timber.plant(SuperLog())
+        appContext = this
 
         component = DaggerAppComponent.builder()
                 .repositoryModule(RepositoryModule())

@@ -1,4 +1,4 @@
-package br.com.ladoleste.simpleredditclient.ui
+package br.com.ladoleste.simpleredditclient.features.newslist
 
 import android.app.ActivityOptions
 import android.content.Intent
@@ -15,9 +15,9 @@ import br.com.ladoleste.simpleredditclient.common.Category
 import br.com.ladoleste.simpleredditclient.common.CustomApplication
 import br.com.ladoleste.simpleredditclient.common.NewsItem
 import br.com.ladoleste.simpleredditclient.common.Util.getErrorMessage
-import br.com.ladoleste.simpleredditclient.ui.adapter.NewsAdapter
-import br.com.ladoleste.simpleredditclient.ui.contracts.MainPresenter
-import br.com.ladoleste.simpleredditclient.ui.contracts.MainView
+import br.com.ladoleste.simpleredditclient.features.comments.CommentsActivity
+import br.com.ladoleste.simpleredditclient.features.common.ItemClick
+import br.com.ladoleste.simpleredditclient.features.common.LoadingScrollListener
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.inc_toolbar.*
 import timber.log.Timber

@@ -12,8 +12,8 @@ import android.support.test.rule.ActivityTestRule
 import android.support.test.runner.AndroidJUnit4
 import br.com.ladoleste.simpleredditclient.common.CustomApplication.Companion.apiUrl
 import br.com.ladoleste.simpleredditclient.common.Util
-import br.com.ladoleste.simpleredditclient.ui.MainActivity
-import br.com.ladoleste.simpleredditclient.ui.adapter.NewsAdapter
+import br.com.ladoleste.simpleredditclient.features.newslist.MainActivity
+import br.com.ladoleste.simpleredditclient.features.newslist.NewsAdapter
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.Rule

@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#eee"
-            tools:context="br.com.ladoleste.simpleredditclient.ui.CommentsActivity">
+            tools:context="br.com.ladoleste.simpleredditclient.features.comments.CommentsActivity">
 
             <ImageView
                 android:id="@+id/image_view"
