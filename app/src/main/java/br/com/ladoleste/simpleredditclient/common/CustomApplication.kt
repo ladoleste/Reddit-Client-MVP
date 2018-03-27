@@ -29,7 +29,7 @@ class CustomApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         Stetho.initializeWithDefaults(this)
-        Timber.plant(SuperLog())
+        Timber.plant(if (BuildConfig.DEBUG) DebugLog() else ReleaseLog())
         appContext = this
 
         component = DaggerAppComponent.builder()

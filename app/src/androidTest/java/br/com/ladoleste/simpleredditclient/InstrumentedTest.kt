@@ -11,7 +11,6 @@ import android.support.test.espresso.matcher.ViewMatchers.*
 import android.support.test.rule.ActivityTestRule
 import android.support.test.runner.AndroidJUnit4
 import br.com.ladoleste.simpleredditclient.common.CustomApplication.Companion.apiUrl
-import br.com.ladoleste.simpleredditclient.common.Util
 import br.com.ladoleste.simpleredditclient.features.newslist.MainActivity
 import br.com.ladoleste.simpleredditclient.features.newslist.NewsAdapter
 import okhttp3.mockwebserver.MockResponse
@@ -49,7 +48,7 @@ class InstrumentedTest {
 
         activityRule.launchActivity(Intent())
 
-        onView(withText("Simple Reddit Client [NEW]")).check(matches(isDisplayed()))
+        onView(withText("Simple Reddit Client [TOP]")).check(matches(isDisplayed()))
 
         onView(withId(R.id.rv_listing))
                 .perform(RecyclerViewActions.scrollToPosition<NewsAdapter.ViewHolder>(9))
