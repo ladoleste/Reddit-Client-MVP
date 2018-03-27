@@ -41,19 +41,30 @@ class CommentsPresenterTest {
         val gson = GsonBuilder().registerTypeAdapter(Thing::class.java, CustomDeserializer()).create()
         comments = gson.fromJson(Helpers.readFile("comments"), type)
 
-        `when`(repo.getComments(view.id)).thenReturn(Single.just(comments))
-
         presenter = CommentsPresenterImpl(repo)
         presenter.setView(view)
     }
 
     @Test
     fun testInterationsWithCommentsView() {
+        `when`(repo.getComments(view.id)).thenReturn(Single.just(comments))
+
         presenter.loadComments()
         verify(view, times(2)).id
         verify(view, never()).showError(Throwable())
         verify(view).showComments(anyList())
         verify(view).showNews(any())
         verify(view, never()).showError(Throwable())
+    }
+
+    @Test(expected = RuntimeException::class)
+    fun testInterationsWithCommentsViewWithError() {
+        `when`(repo.getComments(view.id)).thenThrow(RuntimeException("Mock"))
+
+        presenter.loadComments()
+        verify(view, times(2)).id
+        verify(view).showError(Throwable())
+        verify(view, never()).showComments(anyList())
+        verify(view, never()).showNews(any())
     }
 }

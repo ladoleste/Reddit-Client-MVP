@@ -37,17 +37,28 @@ class MainPresenterTest {
 
         news = Gson().fromJson(Helpers.readFile(), Thing::class.java)
 
-        `when`(repo.getNews(view.category, "")).thenReturn(Single.just(news))
-
         presenter = MainPresenterImpl(repo)
         presenter.setView(view)
     }
 
     @Test
     fun testInterationsWithMainView() {
+        `when`(repo.getNews(view.category, "")).thenReturn(Single.just(news))
+
         presenter.loadNews(false)
         verify(view).showList(any())
         verify(view, never()).showError(Throwable())
+        verify(view, never()).getAfter()
+        verify(view, times(2)).category
+    }
+
+    @Test(expected = RuntimeException::class)
+    fun testInterationsWithMainViewWithError() {
+        `when`(repo.getNews(view.category, "")).thenThrow(RuntimeException("Mock"))
+
+        presenter.loadNews(false)
+        verify(view, never()).showList(any())
+        verify(view).showError(Throwable())
         verify(view, never()).getAfter()
         verify(view, times(2)).category
     }
